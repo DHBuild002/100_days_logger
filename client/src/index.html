@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+	<title>Adding a Row using Javscript</title>
+</head>
+
+<body>
+
+	<div class="form_container">
+		<div class="overlay_form">
+		<!--- Entry.js Form -->
+		<div class="form-box error" dataerrormsg="">
+			<label for="">Date</label>
+			<input type="date" name="" id="input-date">
+		</div>
+		<div class="form-box" data-errormsg="">
+			<label for="input-password">Log Entry</label>
+			<input type="text" id="input-log" required placeholder="Enter notes on what you have achieved today">
+		</div>
+		<div class="form-box" dataerrormsg="">
+			<label for="">Link to todays work</label>
+			<input type="url" name="" id="input-url">
+		</div>
+		<div class="controls">
+			<button id="add-entry">Add an Entry</button>
+			<p id="remove-entry"><a>Remove Last Entry</a></p>
+			<p id="update-entry"><a>Update Entry</a></p>
+		</div>
+	</div>
+</div>
+
+<!-- Logger -->
+<div class="logger-container">
+	<table id="my-table">
+		<tr> <th> Day </th><th> Notes </th> <th>Link to Work</th></tr>
+		<tr>
+			<td>Day</td>
+			<td> Note </td>
+			<td>1 </td>
+		</tr>
+	</table>
+	</div>
+
+<script src="index.js"></script>
+</body>
+</html>

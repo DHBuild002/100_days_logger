@@ -1,0 +1,88 @@
+body {
+	background-color: rgb(190, 245, 179);
+	font-family: "Comfortaa", sans-serif;
+	margin: 0;
+}
+.container {
+	width: auto;
+	position: relative;
+	display: block;
+	align-items: center;
+}
+p{
+	font-size: 12px;
+}
+table{
+	border: 1px solid black;
+	position: static;
+	width: 100%;
+	top: 0;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+th {
+	font-size: 24px;
+	padding: 25px;
+	background-color: rgb(200, 200, 200);
+	border: 1px solid rgb(219, 219, 219);
+}
+td {
+	border: .25px solid rgb(153, 153, 153);
+	padding: 15px;
+	background-color: rgb(255, 255, 255);
+	width: 25%;
+}
+/*Interactive Elements*/
+button {
+	display: block;
+	width: 50%;
+	position: relative;
+	margin: auto;
+	background-color: white;
+	border:1px solid rgb(94, 187, 117);
+	border-radius: 2px;
+	padding: 10px;
+	cursor: pointer;
+	box-shadow: .5px 4px 1px rgb(116, 180, 134);
+}
+button:hover{
+	background-color: rgb(160, 254, 164);
+	transition: ease-in .3s;
+	box-shadow: 0px 3px .5px rgb(116, 180, 134);
+	color: #4e4e4e;
+}
+a {
+	cursor: pointer;
+	color: lightcoral;
+}
+/* Entry Form  */
+.form_container{
+	background-color: white;
+	padding: 5px;
+	margin: auto 0;
+	position: relative;
+}
+.overlay_form {
+	background-color: white;
+	width: 750px;
+	clear: both;
+	padding: 0px;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 1em;
+}
+.overlay_form label {
+	display: block;
+	font-weight: 900;
+	margin-bottom: 0px;
+}
+.overlay_form input {
+	padding: 15px;
+	margin: .6em 3em;
+	width: 80%;
+	clear: both;
+	cursor: pointer;
+}
+.logger-container {
+	margin: 55px 55px;
+}
