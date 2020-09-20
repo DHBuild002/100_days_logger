@@ -5,6 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default {
   devtool: 'source-map',
+  publicPath: "/assets/",
   entry: [
     path.resolve(__dirname, './client/src/index.js')
   ],
@@ -15,6 +16,7 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './client/src/index.html',
       inject: true
