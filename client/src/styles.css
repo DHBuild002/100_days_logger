@@ -1,19 +1,18 @@
+*{
+	box-sizing: border-box;
+}
+
 body {
-	background-color: rgb(190, 245, 179);
+	background-color: rgb(255, 255, 255);
 	font-family: "Comfortaa", sans-serif;
 	margin: 0;
 }
-.container {
-	width: auto;
-	position: relative;
-	display: block;
-	align-items: center;
-}
-p{
+p {
 	font-size: 12px;
+	text-align: right;
 }
-table{
-	border: 1px solid black;
+table {
+	border: .2px solid rgb(175, 175, 175);
 	position: static;
 	width: 100%;
 	top: 0;
@@ -21,10 +20,10 @@ table{
 	border-spacing: 0px;
 }
 th {
-	font-size: 24px;
+	font-size: 20px;
 	padding: 25px;
 	background-color: rgb(200, 200, 200);
-	border: 1px solid rgb(219, 219, 219);
+	border: .4px solid rgb(219, 219, 219);
 }
 td {
 	border: .25px solid rgb(153, 153, 153);
@@ -33,23 +32,24 @@ td {
 	width: 25%;
 }
 /*Interactive Elements*/
+*:focus{
+	outline: #6cc644 5px solid
+}
 button {
-	display: block;
-	width: 50%;
-	position: relative;
-	margin: auto;
-	background-color: white;
-	border:1px solid rgb(94, 187, 117);
-	border-radius: 2px;
-	padding: 10px;
-	cursor: pointer;
-	box-shadow: .5px 4px 1px rgb(116, 180, 134);
+    display: block;
+    width: 75%;
+    position: relative;
+    margin: 20px 0px 5px 0px;
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    padding: 10px;
+    cursor: pointer;
 }
 button:hover{
-	background-color: rgb(160, 254, 164);
-	transition: ease-in .3s;
-	box-shadow: 0px 3px .5px rgb(116, 180, 134);
-	color: #4e4e4e;
+	background-color:#6cc644;
+	transition: ease-in .1s;
+	color: white;
 }
 a {
 	cursor: pointer;
@@ -57,13 +57,12 @@ a {
 }
 /* Entry Form  */
 .form_container{
-	background-color: white;
+	background-color: rgb(56, 56, 56);
 	padding: 5px;
 	margin: auto 0;
 	position: relative;
 }
 .overlay_form {
-	background-color: white;
 	width: 750px;
 	clear: both;
 	padding: 0px;
@@ -72,16 +71,18 @@ a {
 	margin-top: 1em;
 }
 .overlay_form label {
-	display: block;
-	font-weight: 900;
-	margin-bottom: 0px;
+    display: block;
+    color: white;
+    font-weight: 900;
+    margin: 5px 5px;
 }
 .overlay_form input {
-	padding: 15px;
-	margin: .6em 3em;
-	width: 80%;
-	clear: both;
-	cursor: pointer;
+    padding: 15px;
+    margin: 0;
+    margin-bottom: 10px;
+    width: 75%;
+    clear: both;
+    cursor: pointer;
 }
 .logger-container {
 	margin: 55px 55px;
