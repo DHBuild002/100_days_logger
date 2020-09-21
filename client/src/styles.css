@@ -9,7 +9,8 @@ body {
 }
 p {
 	font-size: 12px;
-	text-align: right;
+    margin: 10.6%;
+    display: inline;
 }
 table {
 	border: .2px solid rgb(175, 175, 175);
@@ -33,13 +34,13 @@ td {
 }
 /*Interactive Elements*/
 *:focus{
-	outline: #6cc644 5px solid
+	outline: none;
 }
 button {
     display: block;
-    width: 75%;
+    width: 50%;
     position: relative;
-    margin: 20px 0px 5px 0px;
+    margin: 0% 10%;
     background-color: white;
     border: 1px solid #000000;
     border-radius: 2px;
@@ -53,7 +54,20 @@ button:hover{
 }
 a {
 	cursor: pointer;
+}
+#remove-entry {
+	text-align: left;
 	color: lightcoral;
+	cursor: pointer;
+	text-decoration: underline;
+}
+#update-entry {
+	color: greenyellow;
+	cursor: pointer;
+	text-decoration: underline;	
+}
+.update-options {
+    margin: 4% 0%;
 }
 /* Entry Form  */
 .form_container{
@@ -74,15 +88,20 @@ a {
     display: block;
     color: white;
     font-weight: 900;
-    margin: 5px 5px;
+    margin: .5% .5%;
 }
 .overlay_form input {
-    padding: 15px;
-    margin: 0;
-    margin-bottom: 10px;
-    width: 75%;
+    padding: 10px;
+    margin: 0 10%;
+    margin-bottom: 2.2%;
+    width: 50%;
     clear: both;
     cursor: pointer;
+    background: #f3f3f3;
+    border-radius: 5px;
+}
+.overlay_form input:focus{
+	background-color: white;
 }
 .logger-container {
 	margin: 55px 55px;
