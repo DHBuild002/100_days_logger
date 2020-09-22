@@ -18,7 +18,6 @@ const app = {
 
       newRow.className = 'log'
 
-
   },
   removeLogRow: (tableID) => {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
@@ -26,12 +25,10 @@ const app = {
   },
   updateEntry: () => {
     let updateButtonClicked = true;
-  
-     if(updateButtonClicked === true){
-        
-      } else {
-       console.log('log entry could not be updated');
-      }
+
+    let input_date = document.getElementById('input-date');
+    let input_note = document.getElementById('input-note');
+    let input_URL = document.getElementById('input-url');
   }
 };
 const handlers = {
@@ -47,6 +44,13 @@ const handlers = {
        console.log('log not removed');
       }
   },
+  updateEntry: () => {
+    if(updateButtonClicked === true){
+     app.updateEntry()
+    } else {
+     console.log('log entry could not be updated');
+    }
+  }
 }
 const view = {
   createEventListeners: () => {
@@ -59,7 +63,12 @@ const view = {
   removeLastItem: () => {
     let removeLink = document.getElementById('remove-entry'); 
     removeLink.addEventListener('click', handlers.removeLog);
+  },
+  updateEntry: () => {
+    let updateLink = document.getElementById('update-entry');
+    updateEntry.addEventListener('click', handlers.updateEntry);
   }
 };
 view.createEventListeners();
 view.removeLastItem();
+view.updateEntry()
