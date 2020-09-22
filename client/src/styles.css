@@ -13,21 +13,22 @@ p {
     display: inline;
 }
 table {
-	border: .2px solid rgb(175, 175, 175);
+	border: .2px solid rgb(185, 185, 185);
 	position: static;
 	width: 100%;
 	top: 0;
 	border-collapse: separate;
 	border-spacing: 0px;
+	table-layout: fixed;
 }
 th {
 	font-size: 20px;
 	padding: 25px;
-	background-color: rgb(200, 200, 200);
-	border: .4px solid rgb(219, 219, 219);
+	background-color: rgb(218 217 217 / 21%);
+	border: .6px solid rgb(207, 207, 207);
 }
 td {
-	border: .25px solid rgb(153, 153, 153);
+	border: .25px solid rgb(65, 65, 65);
 	padding: 15px;
 	background-color: rgb(255, 255, 255);
 	width: 25%;
