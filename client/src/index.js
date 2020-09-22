@@ -15,11 +15,14 @@ const app = {
       dayCell.innerHTML = addLogInput_day;
       noteCell.innerHTML = addLogInput_note;
       urlCell.innerHTML = addLogInput_url;
+
+      newRow.className = 'log'
+
+
   },
   removeLogRow: (tableID) => {
-      dayCell.innterHTML = '';
-      noteCell.innterHTML = '';
-      urlCell.innterHTML = '';
+    let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
+    tableRowRemove;
   }
 };
 const handlers = {
@@ -27,17 +30,15 @@ const handlers = {
         app.addLogRow('#my-table');
     },
     removeLog: () => {
-      let elementIsClicked = false; 
-        () => { 
-          elementIsClicked = true;
-        }
+      let elementIsClicked = true;
       let removeButton = document.getElementById('remove-entry');
+
       if(elementIsClicked === true){
         app.removeLogRow('#my-table')
       } else {
        console.log('log not removed');
     }
-  } 
+  },
 }
 const view = {
   createEventListeners: () => {
@@ -48,7 +49,7 @@ const view = {
     });
   },
   removeLastItem: () => {
-    var element = document.getElementById('remove-entry'); 
+    let element = document.getElementById('remove-entry'); 
     element.addEventListener('click', handlers.removeLog);
   }
 };
