@@ -23,6 +23,15 @@ const app = {
   removeLogRow: (tableID) => {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
     tableRowRemove;
+  },
+  updateEntry: () => {
+    let updateButtonClicked = true;
+  
+     if(updateButtonClicked === true){
+        
+      } else {
+       console.log('log entry could not be updated');
+      }
   }
 };
 const handlers = {
@@ -30,14 +39,13 @@ const handlers = {
         app.addLogRow('#my-table');
     },
     removeLog: () => {
-      let elementIsClicked = true;
-      let removeButton = document.getElementById('remove-entry');
+      let removeButtonClicked = true;
 
-      if(elementIsClicked === true){
+      if(removeButtonClicked === true){
         app.removeLogRow('#my-table')
       } else {
        console.log('log not removed');
-    }
+      }
   },
 }
 const view = {
@@ -49,8 +57,8 @@ const view = {
     });
   },
   removeLastItem: () => {
-    let element = document.getElementById('remove-entry'); 
-    element.addEventListener('click', handlers.removeLog);
+    let removeLink = document.getElementById('remove-entry'); 
+    removeLink.addEventListener('click', handlers.removeLog);
   }
 };
 view.createEventListeners();
