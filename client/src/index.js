@@ -1,4 +1,7 @@
 import "./styles.css";
+import "./modal-styles.css";
+import "./modal.js";
+
 const app = {
   addLogRow: (tableID) => {
       let tableRef = document.getElementById('my-table');
@@ -23,13 +26,6 @@ const app = {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
     tableRowRemove;
   },
-  updateEntry: () => {
-    let updateButtonClicked = true;
-
-    let input_date = document.getElementById('input-date');
-    let input_note = document.getElementById('input-note');
-    let input_URL = document.getElementById('input-url');
-  }
 };
 const handlers = {
     addLog: () => {
@@ -44,13 +40,6 @@ const handlers = {
        console.log('log not removed');
       }
   },
-  updateEntry: () => {
-    if(updateButtonClicked === true){
-     app.updateEntry()
-    } else {
-     console.log('log entry could not be updated');
-    }
-  }
 }
 const view = {
   createEventListeners: () => {
@@ -64,11 +53,6 @@ const view = {
     let removeLink = document.getElementById('remove-entry'); 
     removeLink.addEventListener('click', handlers.removeLog);
   },
-  updateEntry: () => {
-    let updateLink = document.getElementById('update-entry');
-    updateEntry.addEventListener('click', handlers.updateEntry);
-  }
 };
 view.createEventListeners();
 view.removeLastItem();
-view.updateEntry()

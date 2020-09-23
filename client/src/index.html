@@ -28,7 +28,19 @@
 			<button id="input-btn">Add Log</button>
 		<div class='update-options'>
 			<p id="remove-entry">Remove Entry</p>
-			<p id="update-entry">Update Entry</p>
+
+			<!-- Modal for Updating logs -->
+			<div class="modal" id="modal">
+				<div class="modal-header">
+					<div class="title">Update Entry</div>
+					<button data-close-button class="close-button">&times;</button>
+				</div>
+				<div class="modal-body">
+					Enter new details for log 'x'
+				</div>
+			</div>
+			<div id="overlay"></div>
+			<p data-modal-target="#modal" class="modal-button">Update Log</p>
 		</div>
 	</div>
 	</div>
