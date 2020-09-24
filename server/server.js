@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const open = require("open");
+const Datastore = require('nedb');
 
 import webpack from 'webpack';
 import config from '../webpack.config.dev.js';
@@ -8,7 +9,6 @@ import config from '../webpack.config.dev.js';
 const port = 8001;
 const app = express();
 const compiler = webpack(config);
-
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -22,5 +22,7 @@ app.listen(port, function(err) {
     console.log(err);
   } else {
     open('http://localhost:' + port);
+    database = new Datastore('log.db');
+    database.loadDatabase();
   }
 });

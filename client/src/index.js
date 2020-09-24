@@ -1,6 +1,7 @@
 import "./styles.css";
 import "./modal-styles.css";
 import "./modal.js";
+const Datastore = require('nedb');
 
 const app = {
   addLogRow: (tableID) => {
@@ -20,6 +21,11 @@ const app = {
       urlCell.innerHTML = addLogInput_url;
 
       newRow.className = 'log'
+      database.insert({
+        date: addLogInput_day, 
+        note: addLogInput_note, 
+        link: addLogInput_url
+      })
 
   },
   removeLogRow: (tableID) => {
