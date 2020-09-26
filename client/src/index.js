@@ -1,10 +1,11 @@
 import "./styles.css";
 import "./modal-styles.css";
 import "./modal.js";
-import { database } from './../../server/database.js';
+import { database } from '../../server/database.js';
 
 const app = {
   addLogRow: (tableID) => {
+
       let tableRef = document.getElementById('my-table');
       let newRow = tableRef.insertRow(-1);
 
@@ -15,8 +16,6 @@ const app = {
       let addLogInput_day = document.getElementById("input-date").value;
       let addLogInput_note = document.getElementById("input-log").value;
       let addLogInput_url = document.getElementById("input-url").value;
-
-      let arr = [];
 
       dayCell.innerHTML = addLogInput_day;
       noteCell.innerHTML = addLogInput_note;
@@ -56,5 +55,6 @@ const view = {
     removeLink.addEventListener('click', handlers.removeLog);
   },
 };
+
 view.createEventListeners();
 view.removeLastItem();
