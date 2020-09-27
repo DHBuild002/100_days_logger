@@ -25,7 +25,7 @@ const app = {
       newRow.className = 'log';
   },
   newLog: () => {
-    let logEntry = new Log("1", addLogInput_note, addLogInput_url);
+    let logEntry = new Log(addLogInput_day, addLogInput_note, addLogInput_url);
       database.insert(logEntry);
       console.log(logEntry);
       
