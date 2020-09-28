@@ -4,6 +4,8 @@ import "./modal.js";
 import { database } from '../../server/database.js';
 import Log from './log.js';
 
+database.insert({testEntry: "Just a test from index.js"})
+
 const app = {
   addLogRow: (tableID) => {
 
@@ -25,10 +27,9 @@ const app = {
       newRow.className = 'log';
   },
   newLog: () => {
-    let logEntry = new Log(addLogInput_day, addLogInput_note, addLogInput_url);
+    let logEntry = new Log("Test", "Test", "Test");
       database.insert(logEntry);
       console.log(logEntry);
-      
   },
   removeLogRow: (tableID) => {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
@@ -40,7 +41,7 @@ const handlers = {
         app.addLogRow('#my-table');
     },
     newLog: () => {
-      console.log('New Log added to DB');
+      console.log("Adding new entry to DB...");
       app.newLog();
     },
     removeLog: () => {
@@ -66,6 +67,12 @@ const view = {
     let removeLink = document.getElementById('remove-entry'); 
     removeLink.addEventListener('click', handlers.removeLog);
   },
+  /* 
+  addLogToDB: () => {
+    const btn = document.getElementById("input-btn");
+    btn.addEventListener('click', handlers.newLog)
+  }
+  */
 };
 
 view.createEventListeners();
