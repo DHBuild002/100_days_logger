@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const open = require("open");
 
-import { database } from './database.js';
 import webpack from 'webpack';
 import config from '../webpack.config.dev.js';
 
