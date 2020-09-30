@@ -4,6 +4,7 @@ import "./modal.js";
 import { database } from '../../server/database.js';
 import Log from './log.js';
 
+database.loadDatabase();
 database.insert({testEntry: "Just a test from index.js"})
 
 const app = {
@@ -25,11 +26,10 @@ const app = {
       urlCell.innerHTML = addLogInput_url;
 
       newRow.className = 'log';
+      app.newLog(addLogInput_day, addLogInput_note, addLogInput_url);
   },
   newLog: () => {
-    let logEntry = new Log("Test", "Test", "Test");
-      database.insert(logEntry);
-      console.log(logEntry);
+          database.insert();
   },
   removeLogRow: (tableID) => {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
