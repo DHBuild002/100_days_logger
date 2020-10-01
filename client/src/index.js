@@ -2,7 +2,7 @@ import "./styles.css";
 import "./modal-styles.css";
 import "./modal.js";
 import { database } from '../../server/database.js';
-import Log from './log.js';
+import Log from './models/Log.js';
 
 database.loadDatabase();
 database.insert({testEntry: "Just a test from index.js"})
@@ -29,7 +29,10 @@ const app = {
       app.newLog(addLogInput_day, addLogInput_note, addLogInput_url);
   },
   newLog: () => {
-          database.insert();
+          // database.insert();
+          const newLog = new Log();
+          database.loadDatabase();
+          console.log('Database log.db created')
   },
   removeLogRow: (tableID) => {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
