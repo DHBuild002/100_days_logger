@@ -1,7 +1,7 @@
 import "./styles.css";
 import "./modal-styles.css";
 import "./modal.js";
-import { database } from '../../server/database.js';
+import { database } from '../../scripts/database.js.js';
 import Log from './models/Log.js';
 
 database.loadDatabase();
@@ -32,7 +32,6 @@ const app = {
           // database.insert();
           const newLog = new Log();
           database.loadDatabase();
-          console.log('Database log.db created')
   },
   removeLogRow: (tableID) => {
     let tableRowRemove = document.getElementById("my-table").deleteRow(-1);
@@ -77,6 +76,10 @@ const view = {
   }
   */
 };
+const init = () =>{
 
-view.createEventListeners();
-view.removeLastItem();
+  view.createEventListeners();
+  view.removeLastItem();
+
+}
+init();

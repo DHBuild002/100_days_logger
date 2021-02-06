@@ -3,7 +3,6 @@ import path from 'path';
 import open from 'open';
 import compression from 'compression';
 
-
 const port = 8002;
 const app = express();
 

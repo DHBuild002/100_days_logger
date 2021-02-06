@@ -1,4 +1,4 @@
-import { database } from '../../../server/database.js';
+import { database } from '../../../scripts/database.js';
 
 export default class Log {
     constructor() {
