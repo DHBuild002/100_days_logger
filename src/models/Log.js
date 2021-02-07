@@ -1,6 +1,6 @@
-import { database } from '../../../scripts/database.js';
+import { database } from './../../scripts/database.js';
 
-export default class Log {
+export class Log {
     constructor() {
         this.logs = database;
     }
