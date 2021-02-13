@@ -69,5 +69,4 @@ const appFunctions = {
   export const init = () => {
     view.createEventListeners();
     view.removeLastItem();
-  
   }
