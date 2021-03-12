@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+	<title>Logger - 100 Days Of Code</title>
+</head>
+
+<body>
+	<div id='app'></div>
+	<div class="form_container">
+		<div class="overlay_form">
+		<div class="form-box error" dataerrormsg="">
+			<label for="">Day</label>
+			<input type="number" name="" id="input-day">
+		</div>
+		<div class="form-box" data-errormsg="">
+			<label for="input-password">Log Entry</label>
+			<input type="text" id="input-log" required placeholder="Enter notes on what you have achieved today">
+		</div>
+		<div class="form-box" dataerrormsg="">
+			<label for="">Link to todays work</label>
+			<input type="url" name="" id="input-url">
+		</div>
+		<div class="controls">
+			<button id="input-btn">Add Log</button>
+		<div class='update-options'>
+			<p id="remove-entry">Remove Entry</p>
+
+			<!-- Modal for Updating logs -->
+			<div class="modal" id="modal">
+				<div class="modal-header">
+					<div class="title">Update Entry</div>
+					<button data-close-button class="close-button">&times;</button>
+				</div>
+				<div class="modal-body">
+					Enter new details for log 'x'
+				</div>
+			</div>
+			<div id="overlay"></div>
+			<p data-modal-target="#modal" class="modal-button">Update Log</p>
+		</div>
+	</div>
+	</div>
+</div>
+
+<!-- Logger -->
+<div class="logger-container">
+	<table id="my-table">
+		<tr> <th> Day </th><th> Notes </th> <th>Link to Work</th></tr>
+	</table>
+	</div>
+
+</body>
+<script src="./dist/bundle.js"></script>
+</html>
