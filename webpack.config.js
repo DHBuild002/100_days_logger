@@ -1,12 +1,12 @@
 const webpack = require("webpack");
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = {
   entry: "./src/index.js",
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "bundle.js"
   },
   module: {
     rules: [
@@ -16,27 +16,27 @@ const config = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: "babel-loader",
+        use: "babel-loader"
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.less$/,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"]
       },
     ],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 4040,
+    port: 9000,
   },
   plugins: [
     new HtmlWebpackPlugin({
       fiilename: "index.html",
-      template: "./dist/index.html",
+      template: "./src/index.html",
     }),
   ],
 };
