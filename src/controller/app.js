@@ -1,4 +1,4 @@
-import { Log } from './../models/Log.js';
+import { Log } from '../models/Log.js';
 
 const appFunctions = {
     addLogRow: (tableID) => {
@@ -18,10 +18,10 @@ const appFunctions = {
         urlCell.innerHTML = addLogInput_url;
   
         newRow.className = 'log';
-        appFunctions.newLog(addLogInput_day, addLogInput_note, addLogInput_url);
+        appFunctions.addLogEntry(addLogInput_day, addLogInput_note, addLogInput_url);
     },
-    newLog: () => {
-            const newLog = new Log();
+    addLogEntry: () => {
+            const addLogEntry = new Log();
             database.loadDatabase();
     },
     removeLogRow: (tableID) => {
@@ -33,9 +33,9 @@ const appFunctions = {
       addLog: () => {
           appFunctions.addLogRow('#my-table');
       },
-      newLog: () => {
+      addLogEntry: () => {
         console.log("Adding new entry to DB...");
-        appFunctions.newLog();
+        appFunctions.addLogEntry();
       },
       removeLog: () => {
         let removeButtonClicked = true;
@@ -52,7 +52,7 @@ const appFunctions = {
       btn.addEventListener("click", function () {
         console.log("Click Detected");
         handlers.addLog();
-        handlers.newLog();
+        handlers.addLogEntry();
       });
     },
     removeLastItem: () => {
@@ -62,7 +62,7 @@ const appFunctions = {
     /* 
     addLogToDB: () => {
       const btn = document.getElementById("input-btn");
-      btn.addEventListener('click', handlers.newLog)
+      btn.addEventListener('click', handlers.addLogEntry)
     }
     */
   };

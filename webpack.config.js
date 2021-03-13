@@ -3,6 +3,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = {
   entry: "./src/index.js",
+  externals: {
+    sqlite3: 'commonjs sqlite3'
+  },
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
