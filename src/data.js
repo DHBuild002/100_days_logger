@@ -3,6 +3,7 @@ import { Database } from 'sqlite3'
 // This does not appear to be necessary:
   // const sqlite = require("sqlite3").verbose();
 
+// Exported/Used in index.js
 export const localDatabase = () => {
   // DB import
   const path = "../sqlite/logs.db";
