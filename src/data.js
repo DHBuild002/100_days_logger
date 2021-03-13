@@ -1,9 +1,13 @@
+import { Database } from 'sqlite3'
+
+// This does not appear to be necessary:
+  // const sqlite = require("sqlite3").verbose();
+
 export const localDatabase = () => {
   // DB import
   const path = "../sqlite/logs.db";
-  const sqlite = require("sqlite3").verbose();
 
-  let db = new sqlite.Database(path, (err) => {
+  let db = new Database(path, (err) => {
     if (err) {
       return console.error(err.message);
     }
